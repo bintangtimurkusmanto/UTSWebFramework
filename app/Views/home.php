@@ -68,4 +68,34 @@
     </div>
     <!-- BATAS  1 -->
 
+	<!-- 2 -->
+    <center>
+        <h2 style="margin-top: 3%;">Prestasi Mahasiswa Pendidikan Teknik Informatika dan Komputer</h2>
+    </center>  
+    <div class="container pt-5 pb-5">
+      <div class="row" style="background-color: white;">
+	  	<?php
+            foreach ($list as $item) {
+        ?>
+        <div class="col-lg-3">
+			<p align="center">
+			<img src="/images/<?= $item['image'] ?>" class="image-fluid" width="150px" height="150px"><br><br>
+			</p>
+        </div>
+		<div class="col-lg-9">
+			<a href="/detail/<?= $item['id'] ?>"><h4><?= $item['judul'] ?></h4></a>
+			<p style="color: grey;"><?= $item['tanggal'] ?></p>
+			<p><?php 
+				 helper('text');
+				 $string = $item['konten'];
+				 $string = word_limiter($string, 20);
+				 echo $string; ?>
+			</p>
+			
+        </div>
+		<?php } ?>
+      </div>
+    </div>
+    <!-- BATAS  2 -->
+
 	<?= $this->endSection(); ?>

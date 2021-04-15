@@ -10,39 +10,53 @@
     
     <?= $this->include('template/sidebar'); ?>
 
-	<!-- INI BANNER SLIDESHOW -->
-	<div class="slideshow-container">
-		<div class="mySlides fade">
-			<div class="numbertext"></div>
-			<img src="../images/1.png" style="width:100%">
-		</div>
-
-		<div class="mySlides fade">
-			<div class="numbertext"></div>
-			<img src="../images/2.png" style="width:100%">
-		</div>
-
-		<div class="mySlides fade">
-			<div class="numbertext"></div>
-			<img src="../images/3.png" style="width:100%">
-		</div>
-
-		<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-		<a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-	</div>
-	<div class="boxDot" ">
-		<span class="dot" onclick="currentSlide(1)"></span> 
-		<span class="dot" onclick="currentSlide(2)"></span> 
-		<span class="dot" onclick="currentSlide(3)"></span> 
-	</div>
-	<!-- BATAS BANNER SLIDESHOW -->
+	<!-- carousel -->
+    <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+        <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="../images/1.png" class="d-block w-100" alt="1.jpg" />
+          <div class="carousel-caption d-none d-md-block">
+            <h5>WELCOME !</h5>
+            <p>Pendidikan Teknik Informaatika dan Komputer</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="../images/2.png" class="d-block w-100" alt="2.jpg" />
+          <div class="carousel-caption d-none d-md-block">
+            <h5>VISI</h5>
+            <p>Menjadi pusat pendidikan, penelitian dan pelatihan yang unggul dan inovatif di tingkat internasional bidang pendidikan kejuruan teknik informatika dan komputer yang berlandaskan nilai-nilai luhur budaya nasional</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="../images/3.png" class="d-block w-100" alt="3.jpg" />
+          <div class="carousel-caption d-none d-md-block">
+            <h5>PENDIDIKAN TEKNIK INFORMATIKA DAN KOMPUTER</h5>
+            <p>
+              Universitas Sebelas Maret
+            </p>
+          </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
 
     <?= $this->renderSection('kontainer'); ?>
 
     <div class="col-lg-4">
 			<div class="card" style="padding:30px;">
-                <h2>Akreditasi BAN-PT</h2>
+                <h4>Akreditasi BAN-PT</h4>
                 <img src="../images/akreditasi.jpg">   
             </div>
 			<div class="card" style="padding:30px; margin-top: 30px;">

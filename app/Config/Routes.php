@@ -40,9 +40,11 @@ $routes->get('/fasilitas/gedung', 'Fasilitas::gedung');
 $routes->get('/fasilitas/laboratorium', 'Fasilitas::laboratorium');
 $routes->get('/fasilitas/perpustakaan', 'Fasilitas::perpustakaan');
 $routes->get('/fasilitas/studio', 'Fasilitas::studio');
-$routes->get('/alur', 'Home::alur');
-$routes->get('/kontak','Home::kontak');
-$routes->get('/fasilitas', 'Home::fasilitas');
+$routes->get('/alur', 'Page::alur');
+$routes->get('/prestasi', 'Page::prestasi');
+$routes->get('/detail/(:segment)', 'Page::detail/$1');
+$routes->get('/kontak','Page::kontak');
+$routes->get('/fasilitas', 'Page::fasilitas');
 
 /*
  * --------------------------------------------------------------------

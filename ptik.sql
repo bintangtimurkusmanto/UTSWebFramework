@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 14, 2021 at 03:55 AM
+-- Generation Time: Apr 15, 2021 at 07:03 AM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.1
 
@@ -113,7 +113,34 @@ INSERT INTO `migrations` (`id`, `version`, `class`, `group`, `namespace`, `time`
 (1, '2021-04-13-111701', 'App\\Database\\Migrations\\Profile', 'default', 'App', 1618314917, 1),
 (2, '2021-04-13-112322', 'App\\Database\\Migrations\\Fasilitas', 'default', 'App', 1618314917, 1),
 (3, '2021-04-13-112353', 'App\\Database\\Migrations\\Jalur', 'default', 'App', 1618314917, 1),
-(4, '2021-04-13-112401', 'App\\Database\\Migrations\\Kontak', 'default', 'App', 1618314917, 1);
+(4, '2021-04-13-112401', 'App\\Database\\Migrations\\Kontak', 'default', 'App', 1618314917, 1),
+(5, '2021-04-15-041829', 'App\\Database\\Migrations\\Prestasi', 'default', 'App', 1618460415, 2);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `prestasis`
+--
+
+CREATE TABLE `prestasis` (
+  `id` int(5) UNSIGNED NOT NULL,
+  `judul` varchar(200) NOT NULL,
+  `image` varchar(100) NOT NULL,
+  `tanggal` varchar(50) NOT NULL,
+  `konten` text NOT NULL,
+  `pembuat` varchar(100) NOT NULL,
+  `created_at` datetime DEFAULT current_timestamp(),
+  `updated_at` datetime DEFAULT current_timestamp() ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `prestasis`
+--
+
+INSERT INTO `prestasis` (`id`, `judul`, `image`, `tanggal`, `konten`, `pembuat`, `created_at`, `updated_at`) VALUES
+(1, 'Mahasiswa Univeritas Sebelas Maret (UNS) meraih juara 1 di lomba video UDB', 'juara_udb.jpg', '8 Februari 2021', '<p>\r\n                        Tim Lomba Video Pendek Universitas Sebelas Maret (UNS) meraih Juara 1 dalam Lomba Video Pendek yang diadakan oleh HIMAPROSMA (Himpunan Mahasiswa Manajemen) Universtias Duta Bangsa. Tim tersebut terdiri dari Yokanang Chandra Arfiansyah yang berasal dari Prodi Pendidikan Ilmu Pengetahuan Alam (IPA) angkatan 2018, Alvin Kurniawan dari Pendidikan Teknik Informatika dan Komputer (PTIK) angkatan 2019, Salsabilla Aliyah dari Pendidikan IPA angkatan 2019, dan Salsabila Noor Assyfa dari Pendidikan Bahasa Indonesia angkatan 2019. Tema lomba yang mereka usung yaitu “Mewujudkan Usaha Kreativitas dan Manajemen Waktu pada New Normal” untuk diajukan dalam lomba video pendek.\r\n                    </p>\r\n                    <p>\r\n                        Video yang mereka buat selama satu minggu berdurasi 6 menit 9 detik tersebut diupload di youtube HIMAPROSMA. Dan dilakukan penjurian oleh juri pada tanggal 5 februari 2021 dengan hasil Juara 1 dengan Judul Optimalkan Waktumu, Pandemi Tetap Produktif! Salsabila Noor Assyfa dan kelompok (Universitas Sebelas Maret), Juara 2 dengan Judul Menciptakan Usaha dimasa Pandemi Covid-19 Calvin Dwi Pratama dan kelompok (BSI Jakarta), Juara 3 dengan Judul Covid ndang lungo o Widianto Prasetyo utomo dan kelompok (Universitas Duta Bangsa), Juara Favorit dengan Judul Inovasi Era New Normal Berliana Noer Janah dan kelompok (Stikes Mamba’ul Ulum Surakarta).\r\n                    </p>\r\n                    <p>\r\n                        Dalam proses pembuatan video nya sendiri terdapat kendala dikarenakan rumah mereka yang jauh satu dengan yang lainnya. Terlebih mereka tentu memiliki kesibukan masing masing, sementara itu dalam pembuatan video tersebut mereka harus melakukan perekaman secara tatap muka langsung dengan tim. Sehingga dalam penyusunan konsep dari video tersebut mereka melakukannya secara daring. Namun usaha mereka dapat membuahkan hasil yang setimpal dengan mendapatkan juara 1 di lomba video pendek yang diadakan oleh Universitas Duta Bangsa.\r\n                    </p> \r\n                    <p>  \r\n                        Mewakili teman-temannya, Salsabila berharap dapat terus mengembangkan kemampuan yang dimiliki dan ikut serta dalam lomba yang lain. “Bisa terus berkembang, terus ngikutin lomba lomba selanjutnya,” pungkasnya.\r\n                    </p>', 'Admin', '2021-04-15 11:21:18', '2021-04-15 11:21:18'),
+(2, 'Mahasiswa PTIK Sabet Medali Perunggu di Jepang', 'juara_jepang.jpg', '12 Januari 2020', '<p>\r\nMahasiswa Universitas Sebelas Maret (UNS) Surakarta berhasil meraih medali perunggu dalam ajang Advanced Innovation Jam (AI-JAM) Japan 2019 yang digelar di Accenture Innovation Hub Tokyo, Minggu (8/12/2019).\r\n</p>\r\n<p>\r\nAjang ini merupakan salah satu ajang kompetisi sekaligus pameran inovasi teknologi internasional terbesar di Jepang yang diikuti oleh 159 peserta yang terbuka untuk seluruh negara, termasuk tim dari UNS ini yang beranggotakan Nur Hijrah As Salam Al Ihsan (Pendidikan Teknik Informatika dan Komputer FKIP), Intan Wahyu Ningsih dan Nada Hidayatus Sangadah (Fisika FMIPA), Serta Tema Rizan Mumtaza dan Muhammad Nibraasuddin Aley Zulkarnaen (Informatika FMIPA).\r\n</p>\r\n<p>\r\nFokus AI-JAM ini seputar inovasi teknologi seperti Artificial Intelligence (AI), Robotik, Hardware, dan Data Mining. Sehingga dalam ajang tersebut, tim ini mengenalkan inovasi berupa aplikasi yang diberi nama ‘Tuker Sampah’. Latar belakang perancangan inovasi ini adalah maraknya gerakan penukaran sampah menjadi sesuatu yang bernilai. Namun sangat disayangkan gerakan-gerakan tersebut tidak termanajemen dengan baik sehingga tidak menjadi gerakan yang berkelanjutan justru seringkali hanya menjadi gerakan yang insidental.\r\n</p>\r\n<p>\r\nHadirnya aplikasi Tuker Sampah diharapkan menjadi jembatan dari gerakan-gerakan tersebut. Terdapat tiga pihak dalam aplikasi ini, yaitu sebagai penghasil sampah, pengelola sampah, dan donatur/instansi/komunitas yang dapat memberikan sesuatu sebagai hasil penukaran poin\r\n</p>\r\n<p>\r\nMekanisme dari aplikasi ini adalah ketika user menggunakan aplikasi, mereka akan mendatangi salah satu shelter terdekat untuk menukarkan sampah. Jenis dan banyaknya sampah menentukan poin yang akan mereka dapatkan. Poin-poin tersebut dapat ditukarkan dengan berbagai hal yang bernilai, seperti jasa layanan kesehatan, cash money, bibit pohon, peralatam pendakian, dll tergantung kebutuhan user.\r\n</p>\r\n<p>\r\nMengenai jangka waktu terdekat, rencana pengembangan dari aplikasi Tuker Sampah ini akan diterapkan khusus di daerah pegunungan. Terkusus lagi Gunung Lawu karena gunung tersebut merupakan gunung dengan jarak terdekat dan strategis dari letak geografis UNS sehingga dapat lebih mudah dalam uji coba realisasi tahap awal. Mekanisme pengembangan aplikasi ini yaitu ketika user (pendaki) menemukan sampah, terdapat dua opsi (memfoto untuk dikirim dalam aplikasi atau membawanya). Jika user memilih untuk memfoto maka user dengan radius terdekat yang berkeinginan membawa sampah akan dengan menemukan letaknya. Jika user memilih untuk menngambil sampah maka ketika sampai pada basecamp terakhir akan dapat ditukar dengan barang-barang pendakian sesuai poin yang didapat.\r\n</p>\r\n<p>\r\nTim tersebut secara bertahap melakukan pengembanagn aplikasi dan sistemnya. Sehingga mereka sangat terbuka dengan berbagai pihak yang ingin bekerja sama untuk merealisasikan ide yang dimiliki. Mereka pun mengharapkan dana dari investor dan juga pemerintah dalam proses pengembangan aplikasi ini.\r\n</p>', 'Admin', '2021-04-15 11:32:22', '2021-04-15 11:32:22'),
+(3, 'HMP PTIK juara Lomba Futsal', 'juara_futsal.jpeg', '23 Oktober 2019', '<p>Surakarta, Minggu 22 Oktober 2019. Tim futsal Menara FC dari Program Studi PTIK Universitas Sebelas Maret Surakarta berhasil menjadi juara 2 dalam lomba futsal yang diselenggarakan oleh Himpunan Mahasiswa PPkn Demokratia dengan total hadiah mencapai Rp. 1.500.000,00- . Lomba tersebut dilaksanakan pada tanggal 21-22 Oktober 2019 bertempat di Gelora Pendidikan FKIP UNS. Disini Tim Menara FC berhasil mendapatkan “reward” berupa satu buah piala dan uang dengan jumlah Rp. 500.000,00-</p>\r\n<p>Tim Menara FC terdiri dari 9 Mahasiswa Prodi PTIK angkatan 2018, 2017, 2016. Berikut daftar pemain Tim Menara FC: 1. Yoga(2017) sebagai kapten Tim. 2. Aldo(2016) sebagai Kiper 3. Daril, Bagas, Akbar, Naufal, Arief sebagai pemain dari angkatan 2016 4. Fauzi sebagai pemain angkatan 2017 5. Erick sebagai pemain 2018.</p>', 'Admin', '2021-04-15 11:34:45', '2021-04-15 11:34:45');
 
 -- --------------------------------------------------------
 
@@ -167,6 +194,12 @@ ALTER TABLE `migrations`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `prestasis`
+--
+ALTER TABLE `prestasis`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `profiles`
 --
 ALTER TABLE `profiles`
@@ -198,7 +231,13 @@ ALTER TABLE `kontaks`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `prestasis`
+--
+ALTER TABLE `prestasis`
+  MODIFY `id` int(5) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `profiles`

@@ -32,7 +32,10 @@
                 </li> 
 				<li class="nav-item">      
 					<a class="nav-link <?php if ($link == "alur"){ echo "active"; } ?>" href="/alur">Jalur Penerimaan</a>     
-				</li>      
+				</li>
+				<li class="nav-item">      
+					<a class="nav-link <?php if ($link == "prestasi"){ echo "active"; } ?>" href="/prestasi">Prestasi</a>     
+				</li> 				      
 				<li class="nav-item">      
 					<a class="nav-link" target="_blank" href="https://www.instagram.com/ptik_uns/">Galeri</a>     
 				</li>
